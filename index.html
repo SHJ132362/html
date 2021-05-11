@@ -5,6 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Docuent</title>
+    <script>
+      function getrandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      var random = getrandom(1, 10);
+
+      while (true) {
+        var num = prompt("你来猜？输入1~10之间的一个数字");
+        if (num > random) {
+          alert("你才大了");
+        } else if (num < random) {
+          alert("你猜小了");
+        } else {
+          alert("答对了!");
+          break;
+        }
+      }
+    </script>
   </head>
   <body></body>
 </html>
